@@ -121,6 +121,7 @@
 \RequirePackage{anyfontsize}
 % 用于排版目录
 \RequirePackage{titletoc}
+\RequirePackage{gbt7714}
 \input{njuthesis.cfg}
 \ifnjut@adobefonts
   \newcommand*{\njut@zhfn@songti}{\njut@zhfn@songti@adobe}
@@ -697,7 +698,7 @@
      {\def\@noitemerr
        {\@latex@warning{Empty `thebibliography' environment}}%
       \endlist}
-\bibliographystyle{gbt7714-2005}
+\bibliographystyle{gbt7714-numerical}
 \setcitestyle{super,square}
 \renewcommand\NAT@citesuper[3]{%
 \ifNAT@swa%

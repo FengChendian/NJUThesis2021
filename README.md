@@ -1,4 +1,6 @@
-# NJU Thesis 2021
+﻿# NJU Thesis 2021 latest
+
+本版本将会试图移除老旧的package，因此可能无法在Texlive 2020及以前的版本运行
 
 [![njuthesis](https://img.shields.io/badge/njuthesis-latex-blue)](https://git.nju.edu.cn/nju-lug/nju-latex-templates)
 [![overleaf](https://img.shields.io/badge/overleaf-supported-brightgreen)](https://tex.nju.edu.cn)
