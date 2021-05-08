@@ -868,39 +868,39 @@
 \newcommand*{\njut@covertable@onelinetitle}{
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@department}
-    & \njutunderline[250pt]{\njut@value@department}\\
+    & \njutunderline[250pt]{\songti\njut@value@department}\\
     \makebox[4.2em][s]{\njut@cap@cover@major}
-    & \njutunderline[250pt]{\njut@value@major}\\
+    & \njutunderline[250pt]{\songti\njut@value@major}\\
     \makebox[4.2em][s]{\njut@cap@cover@title}
     & \njutunderline[250pt]{\bf{\songti\njut@value@title}}
   \end{tabular}
   \begin{tabular}{p{4.2em}cp{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@grade}
-    & \njutunderline[90pt]{\njut@value@grade}
+    & \njutunderline[90pt]{\songti\njut@value@grade}
     & \makebox[4.2em][s]{\njut@cap@cover@studentid}
-    & \njutunderline[90pt]{\njut@value@studentid}\\
+    & \njutunderline[90pt]{\songti\njut@value@studentid}\\
   \end{tabular}
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@author}
-    & \njutunderline[250pt]{\njut@value@author}
+    & \njutunderline[250pt]{\songti\njut@value@author}
   \end{tabular}
   \begin{tabular}{p{4.2em}cp{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@supervisor}
-    & \njutunderline[90pt]{\njut@value@supervisor}
+    & \njutunderline[90pt]{\songti\njut@value@supervisor}
     & \makebox[4.2em][s]{\njut@cap@cover@supervisortitle}
-    & \njutunderline[90pt]{\njut@value@supervisortitle}\\
+    & \njutunderline[90pt]{\songti\njut@value@supervisortitle}\\
   \end{tabular}
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@submitdate}
-    & \njutunderline[250pt]{\njut@value@submitdate}\\
+    & \njutunderline[250pt]{\songti\njut@value@submitdate}\\
   \end{tabular}
 }
 \newcommand*{\njut@covertable@twolinetitle}{
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@department}
-    & \njutunderline[250pt]{\njut@value@department}\\
+    & \njutunderline[250pt]{\songti\njut@value@department}\\
     \makebox[4.2em][s]{\njut@cap@cover@major}
-    & \njutunderline[250pt]{\njut@value@major}\\
+    & \njutunderline[250pt]{\songti\njut@value@major}\\
     \makebox[4.2em][s]{\njut@cap@cover@title}
     & \njutunderline[250pt]{\bf{\songti\njut@value@titlea}} \\
     \makebox[7em][s]{}
@@ -908,23 +908,23 @@
   \end{tabular}
   \begin{tabular}{p{4.2em}cp{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@grade}
-    & \njutunderline[90pt]{\njut@value@grade}
+    & \njutunderline[90pt]{\songti\njut@value@grade}
     & \makebox[4.2em][s]{\njut@cap@cover@studentid}
-    & \njutunderline[90pt]{\njut@value@studentid}\\
+    & \njutunderline[90pt]{\songti\njut@value@studentid}\\
   \end{tabular}
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@author}
-    & \njutunderline[250pt]{\njut@value@author}
+    & \njutunderline[250pt]{\songti\njut@value@author}
   \end{tabular}
   \begin{tabular}{p{4.2em}cp{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@supervisor}
-    & \njutunderline[90pt]{\njut@value@supervisor}
+    & \njutunderline[90pt]{\songti\njut@value@supervisor}
     & \makebox[4.2em][s]{\njut@cap@cover@supervisortitle}
-    & \njutunderline[90pt]{\njut@value@supervisortitle}\\
+    & \njutunderline[90pt]{\songti\njut@value@supervisortitle}\\
   \end{tabular}
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@submitdate}
-    & \njutunderline[250pt]{\njut@value@submitdate}\\
+    & \njutunderline[250pt]{\songti\njut@value@submitdate}\\
   \end{tabular}
   % \begin{tabular}{p{7.3em}c}
   %     \makebox[7em][s]{\njut@cap@cover@title}
@@ -955,7 +955,7 @@
     \vskip 28mm
     \vskip\stretch{0}
     {\bgroup
-    \bf\kaishu\zihao{3}
+    \kaishu\zihao{3}
     \def\tabcolsep{1pt}
     \def\arraystretch{1.5}
     \ifnjut@title@twolinetitle
@@ -976,7 +976,7 @@
     \vskip \stretch{1}
     \normalfont\rmfamily\zihao{4}\njut@cap@cover@en@by
     \vskip 3pt
-    \bf\sffamily\zihao{4}\njut@value@en@author
+    \sffamily\zihao{4}\njut@value@en@author
     \vskip\stretch{1}
     \normalfont\rmfamily\zihao{4}\njut@cap@cover@en@supervisor
     \vskip 3pt

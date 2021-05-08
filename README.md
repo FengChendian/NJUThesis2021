@@ -1,4 +1,4 @@
-﻿# NJU Thesis 2021
+# NJU Thesis 2021
 
 [![njuthesis](https://img.shields.io/badge/njuthesis-latex-blue)](https://git.nju.edu.cn/nju-lug/nju-latex-templates)
 [![overleaf](https://img.shields.io/badge/overleaf-supported-brightgreen)](https://tex.nju.edu.cn)
@@ -36,7 +36,9 @@
 
 GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步镜像](https://git.nju.edu.cn/nju-lug/nju-latex-templates/NJUThesis2021)下载。
 
-下表是目前实测可用的环境。限于设备，未在 macOS 上进行测试。
+下表是目前实测可用的环境。
+
+> macOS系统可以正常编译`tex`文件, 但由于字体原因, 实际输出结果会与其他环境有些许所不同, 使用请谨慎.
 
 | OS           | Tex          | 测试情况 |
 | ------------ | ------------ | -------- |
@@ -69,7 +71,7 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
     .\compile.bat
     ```
 
-  - Linux：
+  - Linux / macOS：
   
     ```shell
     ./compile.sh
