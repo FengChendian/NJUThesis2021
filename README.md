@@ -38,7 +38,7 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 
 下表是目前实测可用的环境。
 
-> macOS系统可以正常编译`tex`文件, 但由于字体原因, 实际输出结果会与其他环境有些许所不同, 使用请谨慎.
+> macOS系统可以正常编译`tex`文件, 但由于字体原因, 实际输出结果会与其他环境有细微不同, 请谨慎使用.
 
 | OS           | Tex          | 测试情况 |
 | ------------ | ------------ | -------- |
@@ -46,6 +46,7 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 | Windows 10   | TexLive 2021 | ✔        |
 | Windows 10   | MikTex 21.2  | ✔        |
 | Ubuntu 20.04 | TexLive 2020 | ✔        |
+| macOS | TexLive 2020 | ✔ |
 | tex.nju.edu.cn | Overleaf   | ✔      |
 
 - Mac系统请使用为MacTex(TexLive+Texshop)-->XeLatex，Windows系统请使用TexLive(TeXworks/Vscode)-->XeLatex，其他环境下还未测试。
