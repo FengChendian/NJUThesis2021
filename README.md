@@ -1,11 +1,11 @@
 ﻿# NJU Thesis 2021 latest
 
-本版本将会试图移除老旧的package，因此可能无法在Texlive 2020及以前的版本运行
+> 本版本将会试图移除老旧的package，因此可能无法在Texlive 2020及以前的版本运行
 
 [![njuthesis](https://img.shields.io/badge/njuthesis-latex-blue)](https://git.nju.edu.cn/nju-lug/nju-latex-templates)
 [![overleaf](https://img.shields.io/badge/overleaf-supported-brightgreen)](https://tex.nju.edu.cn)
 
-南京大学本科生毕业论文LaTex模板 2021
+南京大学本科生毕业论文LaTex模板 2021 latest
 
 [NJU GitLab同步镜像](https://git.nju.edu.cn/nju-lug/nju-latex-templates/NJUThesis2021)
 
@@ -40,15 +40,10 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 
 下表是目前实测可用的环境。
 
-> macOS系统可以正常编译`tex`文件, 但由于字体原因, 实际输出结果会与其他环境有细微不同, 请谨慎使用.
-
 | OS           | Tex          | 测试情况 |
 | ------------ | ------------ | -------- |
-| Windows 10   | TexLive 2020 | ✔        |
 | Windows 10   | TexLive 2021 | ✔        |
 | Windows 10   | MikTex 21.2  | ✔        |
-| Ubuntu 20.04 | TexLive 2020 | ✔        |
-| macOS Big Sur 11.3.1 | TexLive 2020 | ✔ |
 | tex.nju.edu.cn | Overleaf   | ✔      |
 
 - Mac系统请使用为MacTex(TexLive+Texshop)-->XeLatex，Windows系统请使用TexLive(TeXworks/Vscode)-->XeLatex，其他环境下还未测试。
