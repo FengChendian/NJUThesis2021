@@ -46,7 +46,7 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 | Windows 10   | TexLive 2021 | ✔        |
 | Windows 10   | MikTex 21.2  | ✔        |
 | Ubuntu 20.04 | TexLive 2020 | ✔        |
-| macOS | TexLive 2020 | ✔ |
+| macOS Big Sur 11.3.1 | TexLive 2020 | ✔ |
 | tex.nju.edu.cn | Overleaf   | ✔      |
 
 - Mac系统请使用为MacTex(TexLive+Texshop)-->XeLatex，Windows系统请使用TexLive(TeXworks/Vscode)-->XeLatex，其他环境下还未测试。
