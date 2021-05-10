@@ -14,8 +14,11 @@
 > 如果要在南京大学[Overleaf](tex.nju.edu.cn)中使用，请先使用<font color="red">winfonts</font>，linuxfonts和adobefonts暂时没有安装完全，会出现timeout。
 
 - 本版本从AnyiRao仓库fork修改而来
+
 - 原作者RAY个人主页<http://anyirao.com>
+
 - 原作者个人仓库<https://github.com/AnyiRao/NJUThesis2018>
+
 - README从原文档改写而来
 
 ## 鸣谢
@@ -49,7 +52,18 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 - Mac系统请使用为MacTex(TexLive+Texshop)-->XeLatex，Windows系统请使用TexLive(TeXworks/Vscode)-->XeLatex，其他环境下还未测试。
 
 - 点击这里下载TexLive：[TexLive下载地址][TexLive]
+
 - 点击这里下载MacTex：[MacTex下载地址][MacTex]
+
+#### Ubuntu字体下载
+
+为了减少可能的隐患，下载TexLive时请尽量下载`texlive-full`。
+
+如果遇到缺失字体WenQuanYi Zen Hei Mono或Times New Roman，请使用以下指令下载：
+
+```bash
+sudo apt install fonts-wqy-zenhei ttf-mscorefonts-installer
+```
 
 ### 其他注意事项
 
@@ -80,21 +94,24 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 - 不同的平台需要加载的字体不同，请根据tex文件中的提示使用不同的参数。如果遇到字体无法加载的问题请确认系统装有相应字体。不同平台下请反注释相应的代码，例如在windows下，应为：
 
   ```latex
-  %% 如需Adobe字体请用（默认）
+  %% 如需Adobe字体请用
   %\documentclass[adobefonts]{njuthesis}
   %% MacOS系统请用
   %\documentclass[macfonts]{njuthesis}
-  %% Windows系统请用
+  %% Windows系统请用（默认）
   \documentclass[winfonts]{njuthesis}
   %% Linux系统请用
   %\documentclass[linuxfonts]{njuthesis}
   ```
 
 [TexLive]: https://www.tug.org/texlive/
+
 [MacTex]:https://tug.org/mactex/
 
 ## 相关项目
 
 - [南京大学科技报告XeLaTeX模板][nju-report]
+
 - [符合国家标准《GB/T 7714-2005 文后参考文献著录规则》的BibTeX样式文件][gbt7714-2005-bst]
+
 - [中文书刊排版相关标准和规范][typesetting-standard]
