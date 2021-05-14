@@ -22,6 +22,7 @@
 
 \newif\ifnjut@backinfo\njut@backinfofalse
 \newif\ifnjut@title@twolinetitle\njut@title@twolinetitlefalse
+\newif\ifnjut@title@threelinetitle\njut@title@threelinetitlefalse
 \DeclareOption{adobefonts}{\njut@adobefontstrue
   \njut@winfontsfalse
   \njut@linuxfontsfalse
@@ -787,6 +788,10 @@
   \renewcommand{\njut@value@titlea}{#1}}
 \newcommand*{\titleb}[1]{%
   \renewcommand{\njut@value@titleb}{#1}}
+\newcommand*{\titlec}[1]{%
+  \njut@title@twolinetitlefalse
+  \njut@title@threelinetitletrue
+  \renewcommand{\njut@value@titlec}{#1}}
 \renewcommand*{\author}[1]{%
   \renewcommand{\njut@value@author}{#1}}
 \newcommand*{\studentid}[1]{%
@@ -891,6 +896,7 @@
   }
   \cleardoublepage
 }
+% 单行标题
 \newcommand*{\njut@covertable@onelinetitle}{
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@department}
@@ -921,6 +927,7 @@
     & \njutunderline[250pt]{\songti\njut@value@submitdate}\\
   \end{tabular}
 }
+% 两行标题
 \newcommand*{\njut@covertable@twolinetitle}{
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@department}
@@ -952,20 +959,41 @@
     \makebox[4.2em][s]{\njut@cap@cover@submitdate}
     & \njutunderline[250pt]{\songti\njut@value@submitdate}\\
   \end{tabular}
-  % \begin{tabular}{p{7.3em}c}
-  %     \makebox[7em][s]{\njut@cap@cover@title}
-  %     & \njutunderline[310pt]{\njut@value@titlea}\\
-  %     \makebox[7em][s]{}
-  %     & \njutunderline[310pt]{\njut@value@titleb}\\
-  %     \makebox[7em][s]{\njut@cap@cover@author}
-  %     & \njutunderline[310pt]{\njut@value@author}\\
-  %     \makebox[7em][s]{\njut@cap@cover@major}
-  %     & \njutunderline[310pt]{\njut@value@major}\\
-  %     \makebox[7em][s]{\njut@cap@cover@supervisor}
-  %     & \njutunderline[310pt]{\njut@value@supervisor}\\
-  %     \makebox[7em][s]{\njut@cap@cover@researchfield}
-  %     & \njutunderline[310pt]{\njut@value@researchfield}\\
-  % \end{tabular}
+}
+% 三行标题
+\newcommand*{\njut@covertable@threelinetitle}{
+  \begin{tabular}{p{4.2em}c}
+    \makebox[4.2em][s]{\njut@cap@cover@department}
+    & \njutunderline[250pt]{\songti\njut@value@department}\\
+    \makebox[4.2em][s]{\njut@cap@cover@major}
+    & \njutunderline[250pt]{\songti\njut@value@major}\\
+    \makebox[4.2em][s]{\njut@cap@cover@title}
+    & \njutunderline[250pt]{\bf{\songti\njut@value@titlea}}\\
+    \makebox[4.2em][s]{}
+    & \njutunderline[250pt]{\bf{\songti\njut@value@titleb}}\\
+    \makebox[4.2em][s]{}
+    & \njutunderline[250pt]{\bf{\songti\njut@value@titlec}}
+  \end{tabular}
+  \begin{tabular}{p{4.2em}cp{4.2em}c}
+    \makebox[4.2em][s]{\njut@cap@cover@grade}
+    & \njutunderline[90pt]{\songti\njut@value@grade}
+    & \makebox[4.2em][s]{\njut@cap@cover@studentid}
+    & \njutunderline[90pt]{\songti\njut@value@studentid}\\
+  \end{tabular}
+  \begin{tabular}{p{4.2em}c}
+    \makebox[4.2em][s]{\njut@cap@cover@author}
+    & \njutunderline[250pt]{\songti\njut@value@author}
+  \end{tabular}
+  \begin{tabular}{p{4.2em}cp{4.2em}c}
+    \makebox[4.2em][s]{\njut@cap@cover@supervisor}
+    & \njutunderline[90pt]{\songti\njut@value@supervisor}
+    & \makebox[4.2em][s]{\njut@cap@cover@supervisortitle}
+    & \njutunderline[90pt]{\songti\njut@value@supervisortitle}\\
+  \end{tabular}
+  \begin{tabular}{p{4.2em}c}
+    \makebox[4.2em][s]{\njut@cap@cover@submitdate}
+    & \njutunderline[250pt]{\songti\njut@value@submitdate}\\
+  \end{tabular}
 }
 \renewcommand*{\maketitle}{%
   \thispagestyle{empty}
@@ -988,7 +1016,11 @@
     \ifnjut@title@twolinetitle
       \njut@covertable@twolinetitle
     \else
-      \njut@covertable@onelinetitle
+      \ifnjut@title@threelinetitle
+        \njut@covertable@threelinetitle
+      \else
+        \njut@covertable@onelinetitle
+      \fi
     \fi
     \egroup}\\
     \vskip 8mm
