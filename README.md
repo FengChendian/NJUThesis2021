@@ -171,6 +171,25 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
    一般是因为没有使用 bibtex进行编译，请确认按照 xelatex - bibtex - xelatex -xelatex 的顺序对 tex 文件进行编译。
    
    可以使用 vscode 插件、IDE（如 tex studio）或项目根目录的编译脚本，以确保能正确生成参考文献。
+   
+6. **正文行距不是 1.5 倍**
+
+   可能是因为使用了旧版本，并且直接替换了 cls。如果已经使用了旧版本，需要按如下步骤进行迁移：
+
+   1. 使用新的 cls 文件对现有的 cls 文件进行替换
+
+   2. 使用新的 tex 文件对现有的 tex 文件进行替换，或按照如下方式对现有的 tex 文件进行修改：
+
+      ```tex
+      % 开始正文部分
+      \mainmatter
+      \begin{spacing}{1.625} 	% 增加这一行
+      
+      % 现有的正文部分
+      
+      \end{spacing} 			% 增加这一行
+      \end{document}
+      ```
 
 [TexLive]: https://www.tug.org/texlive/
 
