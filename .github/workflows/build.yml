@@ -1,0 +1,32 @@
+name: Build LaTeX document
+on: [push]
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: xelatex main
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: main.tex
+          compiler: xelatex
+          args: -interaction=nonstopmode -shell-escape
+      - name: bibtex main
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: main.tex
+          compiler: bibtex
+      - name: xelatex main
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: main.tex
+          compiler: xelatex
+          args: -interaction=nonstopmode -shell-escape
+      - name: xelatex main
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: main.tex
+          compiler: xelatex
+          args: -interaction=nonstopmode -shell-escape
+
