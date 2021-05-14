@@ -39,6 +39,8 @@
 
 GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步镜像](https://git.nju.edu.cn/nju-lug/nju-latex-templates/NJUThesis2021)下载。
 
+推荐使用最新的**TexLive 2021**或者**MikTex 21**以避免潜在的兼容性问题。
+
 下表是目前实测可用的环境。如果有其他可用环境或不可用的环境，欢迎补充。
 
 > macOS系统可以正常编译`tex`文件, 但由于字体原因, 实际输出结果会与其他环境有细微不同, 请谨慎使用.
