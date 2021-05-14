@@ -499,6 +499,11 @@
 \captionsetup[figure]{position=below,textfont=songtibf}
 % 行距
 % \renewcommand*{\baselinestretch}{1.38}
+% 行距为1.5倍 word行距
+% laTex默认1.2行距，word默认行距是1.3，
+% 所以1.5/1.2*1.3 = 1.625
+\linespread{1.625}
+% \setstretch{1.5}
 \let\convertergy@oldtabular\tabular
 \let\convertergy@endoldtabular\endtabular
 \renewenvironment{tabular}%
@@ -967,6 +972,7 @@
   \pagenumbering{Roman}
   \pdfbookmark[0]{\njut@cap@cover}{cover}
   % Start 
+  \begin{spacing}{1.25}
   \vskip 0mm  
   \hskip -10mm \includegraphics[width=2.55cm]{\njut@cap@institute@logo}\\
   \begin{center}
@@ -987,6 +993,7 @@
     \egroup}\\
     \vskip 8mm
   \end{center}
+  \end{spacing}
   \cleardoublepage
 }
 \newcommand*{\makeenglishtitle}{%
@@ -1036,7 +1043,6 @@
   \begin{center}
     \kaishu\zihao{-2}{\textbf{\uuline{南京大学本科生毕业论文(设计、作品)中文摘要}}}
   \end{center}
-  \begin{spacing}{1.3}
   {\bgroup
     \kaishu\zihao{-4}
     \def\tabcolsep{0pt}
@@ -1050,7 +1056,6 @@
     摘要：
     \egroup
   }
-  \end{spacing}
   \kaishu\zihao{-4}\par%
 }{%
 \newpage
