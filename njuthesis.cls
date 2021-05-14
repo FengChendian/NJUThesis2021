@@ -101,6 +101,49 @@
   \let\leavevmode@ifvmode\@empty
 }
 
+% 输出代码
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+
+\definecolor{mediumgray}{rgb}{0.3, 0.4, 0.4}
+\definecolor{mediumblue}{rgb}{0.0, 0.0, 0.8}
+\definecolor{forestgreen}{rgb}{0.13, 0.55, 0.13}
+\definecolor{darkviolet}{rgb}{0.58, 0.0, 0.83}
+\definecolor{royalblue}{rgb}{0.25, 0.41, 0.88}
+\definecolor{crimson}{rgb}{0.86, 0.8, 0.24}
+
+\lstdefinestyle{CodeBase}{
+  backgroundcolor=\color{white},
+  basicstyle=\ttfamily,
+  breakatwhitespace=false,
+  breaklines=false,
+  captionpos=b,
+  columns=fullflexible,
+  commentstyle=\color{mediumgray}\upshape,
+  emph={},
+  emphstyle=\color{crimson},
+  extendedchars=true,
+  fontadjust=true,
+  frame=single,
+  identifierstyle=\color{black},
+  keepspaces=true,
+  keywordstyle=\color{mediumblue},
+  keywordstyle={[2]\color{darkviolet}},
+  keywordstyle={[3]\color{royalblue}},
+  numbers=left,
+  numberstyle=\color{black},
+  rulecolor=\color{black},
+  showlines=true,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  stringstyle=\color{forestgreen},
+  tabsize=4,
+  title=\lstname,
+  upquote=true
+}
+
 % xelatex默认Unicode，因此注释掉unicode=true
 \hypersetup{%
     % unicode=true,
@@ -1016,11 +1059,7 @@
     \ifnjut@title@twolinetitle
       \njut@covertable@twolinetitle
     \else
-      \ifnjut@title@threelinetitle
-        \njut@covertable@threelinetitle
-      \else
-        \njut@covertable@onelinetitle
-      \fi
+      \njut@covertable@onelinetitle
     \fi
     \egroup}\\
     \vskip 8mm
