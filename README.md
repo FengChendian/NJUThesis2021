@@ -129,7 +129,7 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
    **两行标题**
 
    ```tex
-   \titlea{基于A的B}    % 第一行
+   \titlea{基于A的B}      % 第一行
    \titleb{的设计与实现} % 第二行
    ```
 
@@ -159,7 +159,7 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
    \title{基于A的B的设计与实现}
    \titlea{基于A的B}
    \titleb{的设计}
-   \titleb{与实现}
+   \titlec{与实现}
    ```
 
    这样才能在摘要部分正常显示标题。
