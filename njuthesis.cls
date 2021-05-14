@@ -20,6 +20,9 @@
 \newif\ifnjut@thesis\njut@thesistrue
 \newif\ifnjut@design\njut@designfalse
 
+% 第二导师
+\newif\ifnjut@title@twosupervisors\njut@title@twosupervisorsfalse
+
 \newif\ifnjut@backinfo\njut@backinfofalse
 \newif\ifnjut@title@twolinetitle\njut@title@twolinetitlefalse
 \newif\ifnjut@title@threelinetitle\njut@title@threelinetitlefalse
@@ -849,8 +852,14 @@
   \renewcommand{\njut@value@grade}{#1}}
 \newcommand*{\supervisor}[1]{%
   \renewcommand{\njut@value@supervisor}{#1}}
-  \newcommand*{\supervisortitle}[1]{%
+\newcommand*{\supervisortitle}[1]{%
   \renewcommand{\njut@value@supervisortitle}{#1}}
+\newcommand*{\secondsupervisor}[1]{%
+  \njut@title@twosupervisorstrue
+  \renewcommand{\njut@value@secondsupervisor}{#1}}
+\newcommand*{\secondsupervisortitle}[1]{%
+  \njut@title@twosupervisorstrue
+  \renewcommand{\njut@value@secondsupervisortitle}{#1}}
 \newcommand*{\supervisortelphone}[1]{%
   \renewcommand{\njut@value@supervisortelphone}{#1}}
 \newcommand*{\major}[1]{%
@@ -965,6 +974,15 @@
     & \makebox[4.2em][s]{\njut@cap@cover@supervisortitle}
     & \njutunderline[90pt]{\songti\njut@value@supervisortitle}\\
   \end{tabular}
+  % 第二导师
+  \ifnjut@title@twosupervisors
+    \begin{tabular}{p{4.2em}cp{4.2em}c}
+      \makebox[4.2em][s]{\njut@cap@cover@secondsupervisor}
+      & \njutunderline[90pt]{\songti\njut@value@secondsupervisor}
+      & \makebox[4.2em][s]{\njut@cap@cover@secondsupervisortitle}
+      & \njutunderline[90pt]{\songti\njut@value@secondsupervisortitle}\\
+    \end{tabular}
+  \fi
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@submitdate}
     & \njutunderline[250pt]{\songti\njut@value@submitdate}\\
@@ -998,6 +1016,15 @@
     & \makebox[4.2em][s]{\njut@cap@cover@supervisortitle}
     & \njutunderline[90pt]{\songti\njut@value@supervisortitle}\\
   \end{tabular}
+  % 第二导师
+  \ifnjut@title@twosupervisors
+    \begin{tabular}{p{4.2em}cp{4.2em}c}
+      \makebox[4.2em][s]{\njut@cap@cover@secondsupervisor}
+      & \njutunderline[90pt]{\songti\njut@value@secondsupervisor}
+      & \makebox[4.2em][s]{\njut@cap@cover@secondsupervisortitle}
+      & \njutunderline[90pt]{\songti\njut@value@secondsupervisortitle}\\
+    \end{tabular}
+  \fi
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@submitdate}
     & \njutunderline[250pt]{\songti\njut@value@submitdate}\\
@@ -1033,6 +1060,15 @@
     & \makebox[4.2em][s]{\njut@cap@cover@supervisortitle}
     & \njutunderline[90pt]{\songti\njut@value@supervisortitle}\\
   \end{tabular}
+  % 第二导师
+  \ifnjut@title@twosupervisors
+    \begin{tabular}{p{4.2em}cp{4.2em}c}
+      \makebox[4.2em][s]{\njut@cap@cover@secondsupervisor}
+      & \njutunderline[90pt]{\songti\njut@value@secondsupervisor}
+      & \makebox[4.2em][s]{\njut@cap@cover@secondsupervisortitle}
+      & \njutunderline[90pt]{\songti\njut@value@secondsupervisortitle}\\
+    \end{tabular}
+  \fi
   \begin{tabular}{p{4.2em}c}
     \makebox[4.2em][s]{\njut@cap@cover@submitdate}
     & \njutunderline[250pt]{\songti\njut@value@submitdate}\\
@@ -1050,7 +1086,17 @@
     \includegraphics[height=3.35cm]{\njut@cap@institute@name}\\
     \vskip 10mm
     {\zihao{1}\makebox[9em][s]{\bf{\songti \ifnjut@thesis \njut@cap@cover@thesis \else \njut@cap@cover@design \fi}}}\\
-    \vskip 28mm
+    % 三行标题 + 第二导师可能会导致溢出
+    % 数字可以再调
+    \ifnjut@title@threelinetitle
+      \ifnjut@title@twosupervisors
+        \vskip 18mm
+      \else
+        \vskip 22mm
+      \fi
+    \else
+      \vskip 28mm
+    \fi
     \vskip\stretch{0}
     {\bgroup
     \kaishu\zihao{3}
@@ -1059,7 +1105,11 @@
     \ifnjut@title@twolinetitle
       \njut@covertable@twolinetitle
     \else
-      \njut@covertable@onelinetitle
+      \ifnjut@title@threelinetitle
+        \njut@covertable@threelinetitle
+      \else
+        \njut@covertable@onelinetitle
+      \fi
     \fi
     \egroup}\\
     \vskip 8mm
