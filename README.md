@@ -237,6 +237,6 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 
 - [南京大学科技报告XeLaTeX模板][nju-report]
 
-- [符合国家标准《GB/T 7714-2005 文后参考文献著录规则》的BibTeX样式文件][gbt7714-2005-bst]
+- [符合国家标准《GB/T 7714-2015 文后参考文献著录规则》的BibTeX样式文件][gbt7714-2015-bst]
 
 - [中文书刊排版相关标准和规范][typesetting-standard]

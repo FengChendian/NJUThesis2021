@@ -165,7 +165,8 @@
     pdfborder=0 0 0%
 }
 \urlstyle{same}
-\RequirePackage[sort&compress,numbers]{natbib}
+% \RequirePackage[sort&compress,numbers]{natbib}
+\RequirePackage[sort&compress]{gbt7714}
 \RequirePackage{hypernat}
 \RequirePackage{tabularx}
 \RequirePackage{makeidx}
@@ -770,7 +771,7 @@
      {\def\@noitemerr
        {\@latex@warning{Empty `thebibliography' environment}}%
       \endlist}
-\bibliographystyle{gbt7714-2005}
+\bibliographystyle{gbt7714-numerical}
 \setcitestyle{super,square}
 \renewcommand\NAT@citesuper[3]{%
 \ifNAT@swa%
