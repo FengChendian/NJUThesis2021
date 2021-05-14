@@ -45,13 +45,14 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 
 | OS           | Tex          | 测试情况 |
 | ------------ | ------------ | -------- |
+| Windows 10   | TexLive 2021 | ✔ |
 | Windows 10   | TexLive 2020 | ✔        |
-| Windows 10   | TexLive 2021 | ✔        |
 | Windows 10   | MikTex 21.2  | ✔        |
-| Ubuntu 20.04 | TexLive 2020 | ✔ (e8502e版)       |
-| Ubuntu 18.04 | TexLive 2017 | ✔        |
-| macOS Big Sur 11.3.1 | TexLive 2020 | ✔ |
-| tex.nju.edu.cn | Overleaf   | ✔      |
+| Ubuntu 20.04 | TexLive 2021 | ✔       |
+| Ubuntu 20.04         | TexLive 2020 | ✔ (e8502e版) |
+| Ubuntu 18.04         | TexLive 2017 | ✔            |
+| macOS Big Sur 11.3.1 | TexLive 2020 | ✔            |
+| tex.nju.edu.cn | Overleaf | ✔ |
 
 - Mac系统请使用为MacTex(TexLive+Texshop)-->XeLatex，Windows系统请使用TexLive(TeXworks/Vscode)-->XeLatex，其他环境下还未测试。
 
@@ -105,6 +106,8 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 1. **如何选择 TexLive / MacTex 版本**
 
    为了避免不必要的麻烦，尽可能下载 full 版本，如 `texlive-full`。简而言之，下载大的那个。
+   
+   并且，尽可能使用**最新版**（截至目前是 2021）。2020 及之前版本使用 PDF 格式的图片可能会出现加粗问题。
 
 #### 字体
 
@@ -212,6 +215,19 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 
    1. 截图，然后以图片形式插入论文
    2. 使用模板中的代码段示例。模板中提供了一份基础样式，如果有更多需要，可以自行修改样式。
+   
+9. **如何添加第二导师**（issue #23）
+
+   使用如下命令：
+
+   ```tex
+   \secondsupervisor{导师姓名}
+   \secondsupervisortitle{职称}
+   ```
+
+10. **使用PDF格式的图片内容会被加粗**（issue #24）
+
+    目前看来是 caption 宏包的 bug，升级到 texlive 2021，或者使用新版 miktex 可以解决这个问题。
 
 [TexLive]: https://www.tug.org/texlive/
 
