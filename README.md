@@ -185,6 +185,10 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
       \linespread{1.25}
       ```
 
+7. **使用design选项后报错**
+
+   可能是没有替换cfg和cls文件，替换即可
+
 [TexLive]: https://www.tug.org/texlive/
 
 [MacTex]:https://tug.org/mactex/
