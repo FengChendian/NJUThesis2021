@@ -90,21 +90,21 @@
 
 % 论文的中文摘要
 \begin{abstract}
-模板。
+  模板。
 
-手写中文文本的多样性、差异性让它的识别成为一个富有前景但又充满挑战的计算机视觉问题。
+  手写中文文本的多样性、差异性让它的识别成为一个富有前景但又充满挑战的计算机视觉问题。
 
-% 同时应该注意到，空白页是故意留白，以便章节开头能够出现在奇数页（另页右页开始）。
-% 中文关键词。关键词之间用中文全角分号隔开，末尾无标点符号。
-\keywords{手写中文；文本识别；深度学习}
+  % 同时应该注意到，空白页是故意留白，以便章节开头能够出现在奇数页（另页右页开始）。
+  % 中文关键词。关键词之间用中文全角分号隔开，末尾无标点符号。
+  \keywords{手写中文；文本识别；深度学习}
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 论文的英文摘要
 \begin{englishabstract}
-The diversity of handwritten Chinese text make it a promising but challenging computer vision problem. 
-% 英文关键词。关键词之间用英文半角逗号隔开，末尾无符号。
-\englishkeywords{Handwritten Chinese, Text recognition, Deep learning}
+  The diversity of handwritten Chinese text make it a promising but challenging computer vision problem.
+  % 英文关键词。关键词之间用英文半角逗号隔开，末尾无符号。
+  \englishkeywords{Handwritten Chinese, Text recognition, Deep learning}
 \end{englishabstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,13 +141,13 @@ The diversity of handwritten Chinese text make it a promising but challenging co
 % 学位论文的正文应以《绪论》作为第一章
 \chapter{绪论}\label{chapter_introduction}
 \section{研究背景}
-在过去的40年中，手写中文文本识别（HCTR）的研究获得了很大的进展，效果得到了很大的提升\cite{fujisawa2008forty}。但是，由于手写中文文本的多样性，它依然是一个具有研究意义和挑战性的问题\cite{xu2012touching}。不同的文本有不同的书写风格，如图\ref{fig:style}。 
+在过去的40年中，手写中文文本识别（HCTR）的研究获得了很大的进展，效果得到了很大的提升\cite{fujisawa2008forty}。但是，由于手写中文文本的多样性，它依然是一个具有研究意义和挑战性的问题\cite{xu2012touching}。不同的文本有不同的书写风格，如图\ref{fig:style}。
 
 \begin{figure}[htbp]
-   \centering
-   \includegraphics[width=0.9\textwidth]{style.png} % requires the graphicx package
-   \caption{不同的书写风格。对于同一句话，有不同的书写风格：倾斜，写错字，工整，潦草等。}
-   \label{fig:style}
+  \centering
+  \includegraphics[width=0.9\textwidth]{style.png} % requires the graphicx package
+  \caption{不同的书写风格。对于同一句话，有不同的书写风格：倾斜，写错字，工整，潦草等。}
+  \label{fig:style}
 \end{figure}
 
 \section{相关工作}
@@ -158,11 +158,11 @@ The diversity of handwritten Chinese text make it a promising but challenging co
 \section{本文主要工作}
 本文旨在对图片级手写中文文本做出识别分类。主要工作如下：
 \begin{enumerate}
-\item 在标准公开数据集里获得了一定的识别准确度。
+  \item 在标准公开数据集里获得了一定的识别准确度。
 
-\item 在标准公开数据集上击败了一些相关工作的结果。
+  \item 在标准公开数据集上击败了一些相关工作的结果。
 
-\item 建立分本分行规划表格，很好地处理了文本的分行，降低了训练开销。
+  \item 建立分本分行规划表格，很好地处理了文本的分行，降低了训练开销。
 
 \end{enumerate}
 \section{本文结构}
@@ -184,48 +184,48 @@ The diversity of handwritten Chinese text make it a promising but challenging co
 
 一行一图，如图\ref{fig:line}
 \begin{figure}[htbp]
-   \centering
-   \includegraphics[width=0.7\textwidth]{line.png} % requires the graphicx package
-   \caption{待分行文本}
-   \label{fig:line}
-   %\vspace{0.8cm} % 用来调整和下方文字的间距
+  \centering
+  \includegraphics[width=0.7\textwidth]{line.png} % requires the graphicx package
+  \caption{待分行文本}
+  \label{fig:line}
+  %\vspace{0.8cm} % 用来调整和下方文字的间距
 \end{figure}
 
 
 一行两个图
 \begin{figure}[ht!]
+  \centering
+  \begin{subfigure}{.5\textwidth}
     \centering
-    \begin{subfigure}{.5\textwidth}
-    	\centering
-        \includegraphics[width=0.9\textwidth]{lstm1.png}
-        \caption{长短时记忆单元模块}
-    \end{subfigure}
-    \begin{subfigure}{.4\textwidth}
-    	\centering
-        \includegraphics[width=0.8\textwidth]{lstm2.png}
-        \caption{深双向长短时记忆}
-        \label{fig:lstm2}
-    \end{subfigure}
-    \caption{(a)一个长短时记忆单元模块。(b)深度双向长短时记忆的结构。}
-\label{fig:lstm}
+    \includegraphics[width=0.9\textwidth]{lstm1.png}
+    \caption{长短时记忆单元模块}
+  \end{subfigure}
+  \begin{subfigure}{.4\textwidth}
+    \centering
+    \includegraphics[width=0.8\textwidth]{lstm2.png}
+    \caption{深双向长短时记忆}
+    \label{fig:lstm2}
+  \end{subfigure}
+  \caption{(a)一个长短时记忆单元模块。(b)深度双向长短时记忆的结构。}
+  \label{fig:lstm}
 \end{figure}
 
 多行多图
 \begin{figure}[ht!]
+  \centering
+  \begin{subfigure}{\textwidth}
     \centering
-    \begin{subfigure}{\textwidth}
-        \centering
-        \includegraphics[width=0.59\textwidth]{line1.png}
-        \caption{全局损失切割}
-        \label{fig:line1}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-    	\centering
-        \includegraphics[width=0.59\textwidth]{line2.png}
-        \caption{局部损失切割}
-        \label{fig:line2}
-    \end{subfigure}
-    \caption{分行结果比较。（a）全局损失切割；（b）局部损失切割；（c）局部水平投影切割；（d）投影损失切割}
+    \includegraphics[width=0.59\textwidth]{line1.png}
+    \caption{全局损失切割}
+    \label{fig:line1}
+  \end{subfigure}
+  \begin{subfigure}{\textwidth}
+    \centering
+    \includegraphics[width=0.59\textwidth]{line2.png}
+    \caption{局部损失切割}
+    \label{fig:line2}
+  \end{subfigure}
+  \caption{分行结果比较。（a）全局损失切割；（b）局部损失切割；（c）局部水平投影切割；（d）投影损失切割}
 \end{figure}
 
 \newpage %为了将图片实例放在一起，另起一页，使用时请删掉
@@ -234,51 +234,51 @@ The diversity of handwritten Chinese text make it a promising but challenging co
 \section{公式}
 
 \begin{equation}
-\frac{\partial L}{\partial a_{k}^t} = {d(s)}^2 (y_{k}^t - \frac{\sum_{lab(\mathbf{l},k)} \alpha_t(s)\beta_t(s) }{y_{k}^t} )
+  \frac{\partial L}{\partial a_{k}^t} = {d(s)}^2 (y_{k}^t - \frac{\sum_{lab(\mathbf{l},k)} \alpha_t(s)\beta_t(s) }{y_{k}^t} )
 \end{equation}
 
 \begin{equation}
-\begin{aligned}
-d_{{0j}}&=\sum _{{k=1}}^{{j}}w_{{\mathrm  {ins}}}(a_{{k}}),\quad &{\text{for}}\;1\leq j\leq n\\
-d_{{ij}}&={\begin{cases}d_{{i-1,j-1}}&{\text{for}}\;a_{{j}}=b_{{i}}\\\min {\begin{cases}d_{{i-1,j}}+w_{{\mathrm  {del}}}(b_{{i}})\\d_{{i,j-1}}+w_{{\mathrm  {ins}}}(a_{{j}})\\d_{{i-1,j-1}}+w_{{\mathrm  {sub}}}(a_{{j}},b_{{i}})\end{cases}}&{\text{for}}\;a_{{j}}\neq b_{{i}}\end{cases}}\quad &{\text{for}}\;1\leq i\leq m,1\leq j\leq n.
-\end{aligned}
+  \begin{aligned}
+    d_{{0j}} & =\sum _{{k=1}}^{{j}}w_{{\mathrm  {ins}}}(a_{{k}}),\quad & {\text{for}}\;1\leq j\leq n                \\
+    d_{{ij}} & ={\begin{cases}d_{{i-1,j-1}}&{\text{for}}\;a_{{j}}=b_{{i}}\\\min {\begin{cases}d_{{i-1,j}}+w_{{\mathrm  {del}}}(b_{{i}})\\d_{{i,j-1}}+w_{{\mathrm  {ins}}}(a_{{j}})\\d_{{i-1,j-1}}+w_{{\mathrm  {sub}}}(a_{{j}},b_{{i}})\end{cases}}&{\text{for}}\;a_{{j}}\neq b_{{i}}\end{cases}}\quad                      & {\text{for}}\;1\leq i\leq m,1\leq j\leq n.
+  \end{aligned}
 \end{equation}
 
 \begin{equation}
-\begin{aligned}
-&\beta_T(|l{}'|)=y_{b}^{T}\\
-&\beta_T(|l{}'|-1)=y_{l_|l|}^{T} \\
-&\beta_T(s)=0, \forall s < |l{}'|-1
-\end{aligned}
+  \begin{aligned}
+     & \beta_T(|l{}'|)=y_{b}^{T}          \\
+     & \beta_T(|l{}'|-1)=y_{l_|l|}^{T}    \\
+     & \beta_T(s)=0, \forall s < |l{}'|-1
+  \end{aligned}
 \end{equation}
 
 递归公式
 \begin{equation}
-\beta_t(s)=\left\{
-\begin{aligned}
-& (\beta_{t+1}(s) d(s)+\beta_{t+1}(s+1))d(s+1)\,  y_{l_s{}'}^t, \: \: if \:  l_s{}'=b \:  or \:  l_{s+2}{}'=l_s{}'\\
-& (\beta_{t+1}(s) d(s)+\beta_{t+1}(s+1)d(s+1)+\beta_{t+1}(s+2)d(s+2))\,  y_{l_s{}'}^t,\: \:   otherwise
-\end{aligned}
-\right.
+  \beta_t(s)=\left\{
+  \begin{aligned}
+     & (\beta_{t+1}(s) d(s)+\beta_{t+1}(s+1))d(s+1)\,  y_{l_s{}'}^t, \: \: if \:  l_s{}'=b \:  or \:  l_{s+2}{}'=l_s{}' \\
+     & (\beta_{t+1}(s) d(s)+\beta_{t+1}(s+1)d(s+1)+\beta_{t+1}(s+2)d(s+2))\,  y_{l_s{}'}^t,\: \:   otherwise
+  \end{aligned}
+  \right.
 \end{equation}
 
 \section{表格}
 
 \begin{table}[htbp]
-\setlength{\belowcaptionskip}{7pt}
+  \setlength{\belowcaptionskip}{7pt}
   \centering
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-\hline 
-  &   & 国 & 内 & 企 & 业 & 包 & 括 & 许 & 多 \\ 
-\hline 
-  & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 
-\hline 
-国 & 1 & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ 
-\hline 
-著 & 2 & 1 & 1 & 2 & 2 & 3 & 4 & 5 & 6 \\ 
-\hline
-\end{tabular} 
-\vspace{0.2cm}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+       &   & 国 & 内 & 企 & 业 & 包 & 括 & 许 & 多 \\
+    \hline
+       & 0 & 1  & 2  & 3  & 4  & 5  & 6  & 7  & 8  \\
+    \hline
+    国 & 1 & 0  & 1  & 2  & 3  & 4  & 5  & 6  & 7  \\
+    \hline
+    著 & 2 & 1  & 1  & 2  & 2  & 3  & 4  & 5  & 6  \\
+    \hline
+  \end{tabular}
+  \vspace{0.2cm}
   \caption{编辑距离（乐文斯汀距离计算过程示例表格。字符串``国内企业包括许多''与``国著名括许多''乐文斯汀距离是3。}\label{table:ld}
 \end{table}
 
@@ -286,19 +286,19 @@ d_{{ij}}&={\begin{cases}d_{{i-1,j-1}}&{\text{for}}\;a_{{j}}=b_{{i}}\\\min {\begi
 \section{算法}
 
 \begin{algorithm}
-\caption{Beam Search}
-\label{alg:beam}
-\begin{algorithmic}[1]
-\STATE {将初始节点插入到集束中。} 
-\WHILE{遍历未结束}
-\STATE {遍历集束中所有节点的后续节点。} 
-\IF{该节点是目标节点}
-\STATE {算法结束。}
-\ELSE 
-\STATE {扩展该节点，取集束宽度的节点入堆。}
-\ENDIF
-\ENDWHILE
-\end{algorithmic}
+  \caption{Beam Search}
+  \label{alg:beam}
+  \begin{algorithmic}[1]
+    \STATE {将初始节点插入到集束中。}
+    \WHILE{遍历未结束}
+    \STATE {遍历集束中所有节点的后续节点。}
+    \IF{该节点是目标节点}
+    \STATE {算法结束。}
+    \ELSE
+    \STATE {扩展该节点，取集束宽度的节点入堆。}
+    \ENDIF
+    \ENDWHILE
+  \end{algorithmic}
 \end{algorithm}
 
 集束宽度可以在搜索过程中保持为一个定值，也可以根据搜索的进行而变化。搜索算法可以根据搜索的结果进行调整，比如，当以一个小的集束宽度搜索解却无法找到适合解的时候，可以增大集束宽度重新进行一次搜索。
@@ -336,18 +336,18 @@ d_{{ij}}&={\begin{cases}d_{{i-1,j-1}}&{\text{for}}\;a_{{j}}=b_{{i}}\\\min {\begi
 
 \vspace{0.2cm}
 \begin{table}[htbp]
-\setlength{\belowcaptionskip}{5pt}
+  \setlength{\belowcaptionskip}{5pt}
   \centering
   \begin{tabular}{cccc}
     \toprule
-    \textbf{方法} & \textbf{HWDB1} & \textbf{HWDB2} & \textbf{HWDB3} \\
+    \textbf{方法}                     & \textbf{HWDB1} & \textbf{HWDB2} & \textbf{HWDB3} \\
     \midrule
-    Wang 等人\cite{wang2012end}   			& 74.0 & 60.0 & 68.0  \\
-    Mishra 等人\cite{mishra2012scene}		 	& 80.8 & 63.6 & 73.5  \\
-    百度通用文字识别\cite{baiduapi}		& 64.8 & 36.8 & 60.8 \\
+    Wang 等人\cite{wang2012end}       & 74.0           & 60.0           & 68.0           \\
+    Mishra 等人\cite{mishra2012scene} & 80.8           & 63.6           & 73.5           \\
+    百度通用文字识别\cite{baiduapi}   & 64.8           & 36.8           & 60.8           \\
     \midrule
-    我们的方法（没有字典信息）& 81.5 & 67.5 & 73.6  \\
-    我们的方法	  		& \textbf{81.8} & \textbf{67.8} & \textbf{73.9}  \\
+    我们的方法（没有字典信息）        & 81.5           & 67.5           & 73.6           \\
+    我们的方法                        & \textbf{81.8}  & \textbf{67.8}  & \textbf{73.9}  \\
     \bottomrule
   \end{tabular}
   \vspace{0.2cm}
@@ -365,7 +365,7 @@ d_{{ij}}&={\begin{cases}d_{{i-1,j-1}}&{\text{for}}\;a_{{j}}=b_{{i}}\\\min {\begi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 致谢，应放在结论之后
 \begin{acknowledgement}
-感谢在实验室度过的两年时光，老师无论在学术还是人生的指导上都对我起到了很大的帮助；师兄师姐小伙伴们的鼓励支持和陪伴是我坚持下去的动力。
+  感谢在实验室度过的两年时光，老师无论在学术还是人生的指导上都对我起到了很大的帮助；师兄师姐小伙伴们的鼓励支持和陪伴是我坚持下去的动力。
 \end{acknowledgement}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
