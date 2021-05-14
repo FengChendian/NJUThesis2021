@@ -118,7 +118,7 @@
 
 \lstdefinestyle{CodeBase}{
   backgroundcolor=\color{white},
-  basicstyle=\ttfamily,
+  basicstyle=\small\ttfamily,
   breakatwhitespace=false,
   breaklines=false,
   captionpos=b,
