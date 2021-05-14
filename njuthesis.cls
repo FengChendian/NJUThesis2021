@@ -84,7 +84,7 @@
 \RequirePackage{ulem}
 \normalem
 \RequirePackage{pdfpages}
-\usepackage{algorithm}
+\RequirePackage{algorithm}
 \floatname{algorithm}{算法}
 \numberwithin{algorithm}{chapter}
 % \RequirePackage[CJKnumber,CJKchecksingle]{xeCJK}
@@ -102,9 +102,9 @@
 }
 
 % 输出代码
-\usepackage{listings}
-\usepackage{color}
-\usepackage{textcomp}
+\RequirePackage{listings}
+\RequirePackage{color}
+\RequirePackage{textcomp}
 
 \definecolor{mediumgray}{rgb}{0.3, 0.4, 0.4}
 \definecolor{mediumblue}{rgb}{0.0, 0.0, 0.8}
