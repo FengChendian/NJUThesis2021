@@ -174,21 +174,15 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
    
 6. **正文行距不是 1.5 倍**
 
-   可能是因为使用了旧版本，并且直接替换了 cls。如果已经使用了旧版本，需要按如下步骤进行迁移：
+   可能是因为使用了旧版本，或者是直接替换了 cls。如果已经使用了旧版本，需要按如下步骤进行迁移：
 
    1. 使用新的 cls 文件对现有的 cls 文件进行替换
 
-   2. 使用新的 tex 文件对现有的 tex 文件进行替换，或按照如下方式对现有的 tex 文件进行修改：
+   2. 使用新的 tex 文件对现有的 tex 文件进行替换，或删除在tex文件中的：
 
       ```tex
-      % 开始正文部分
-      \mainmatter
-      \begin{spacing}{1.625} 	% 增加这一行
-      
-      % 现有的正文部分
-      
-      \end{spacing} 			% 增加这一行
-      \end{document}
+      % 开头部分
+      \linespread{1.25}
       ```
 
 [TexLive]: https://www.tug.org/texlive/
