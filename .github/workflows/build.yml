@@ -9,24 +9,24 @@ jobs:
       - name: xelatex main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: main.tex
+          root_file: sample.tex
           compiler: xelatex
           args: -interaction=nonstopmode -shell-escape
       - name: bibtex main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: main.tex
+          root_file: sample.tex
           compiler: bibtex
       - name: xelatex main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: main.tex
+          root_file: sample.tex
           compiler: xelatex
           args: -interaction=nonstopmode -shell-escape
       - name: xelatex main
         uses: dante-ev/latex-action@latest
         with:
-          root_file: main.tex
+          root_file: sample.tex
           compiler: xelatex
           args: -interaction=nonstopmode -shell-escape
 
