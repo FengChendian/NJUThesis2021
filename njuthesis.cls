@@ -1174,7 +1174,7 @@
     院系： \njut@value@department \\
     专业： \njut@value@major \\
     本科生姓名： \njut@value@author \\
-    指导老师（姓名、职称）： \njut@value@supervisor\ \njut@value@supervisortitle \\
+    指导教师（姓名、职称）： \njut@value@supervisor\ \njut@value@supervisortitle \\
     摘要：
     \egroup
   }
