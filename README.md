@@ -3,7 +3,9 @@
 [![njuthesis](https://img.shields.io/badge/njuthesis-latex-blue)](https://git.nju.edu.cn/nju-lug/nju-latex-templates)
 [![overleaf](https://img.shields.io/badge/overleaf-supported-brightgreen)](https://tex.nju.edu.cn)
 
-南京大学本科生毕业论文LaTex模板 2021
+南京大学本科生毕业论文LaTex模板（2021版）
+
+**重要提醒：希望大家实时关注模板更新，定稿前最好使用最新版本的模板！**
 
 [NJU GitLab同步镜像](https://git.nju.edu.cn/nju-lug/nju-latex-templates/NJUThesis2021)
 
