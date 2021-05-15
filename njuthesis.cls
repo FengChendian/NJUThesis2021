@@ -556,7 +556,7 @@
 \let\convertergy@endoldtabular\endtabular
 \renewenvironment{tabular}%
 {\bgroup%
-\renewcommand{\arraystretch}{1.5}%
+\renewcommand{\arraystretch}{1.3}%
 \convertergy@oldtabular}%
 {\convertergy@endoldtabular\egroup}
 \geometry{headheight=2.6cm,headsep=3mm,footskip=13mm}
