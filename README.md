@@ -51,6 +51,7 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 | ------------ | ------------ | -------- |
 | Windows 10   | TexLive 2021 | ✔ |
 | Windows 10   | TexLive 2020 | ✔        |
+| Windows 10   | TexLive 2017 | ×        |
 | Windows 10   | MikTex 21.2  | ✔        |
 | Ubuntu 20.04 | TexLive 2021 | ✔       |
 | Ubuntu 20.04         | TexLive 2020 | ✔ (e8502e版) |
