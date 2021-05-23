@@ -9,32 +9,6 @@
 
 [NJU GitLab同步镜像](https://git.nju.edu.cn/nju-lug/nju-latex-templates/NJUThesis2021)
 
-## 说明
-
-> 如果要在南京大学[Overleaf](tex.nju.edu.cn)中使用，请先使用<font color="red">winfonts</font>，linuxfonts和adobefonts暂时没有安装完全，会出现timeout。
-
-- 本版本从AnyiRao仓库fork修改而来
-
-- 原作者RAY个人主页<http://anyirao.com>
-
-- 原作者个人仓库<https://github.com/AnyiRao/NJUThesis2018>
-
-- README从原文档改写而来
-
-## 鸣谢
-
-- 本模板由学长学姐的南京大学硕士博士学位论文模板改编而来。
-
-## 声明
-
-- 此模版用于生成符合南京大学学位论文排版要求和相应的国家规范、行业标准的学位论文。
-
-- 基于本科生院的论文撰写规范修改。
-
-- 限于精力未提供**详细**使用说明。
-
-- 本模板旨在为同学提供毕业论文书写的方便，如有模板问题或者版权问题，请联系作者。
-
 ## 使用说明
 
 ### 环境配置
@@ -42,6 +16,8 @@
 GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步镜像](https://git.nju.edu.cn/nju-lug/nju-latex-templates/NJUThesis2021)下载。
 
 推荐使用最新的**TexLive 2021**或者**MikTex 21**以避免潜在的兼容性问题。
+
+如果要在南京大学[Overleaf](tex.nju.edu.cn)中使用，请先使用<font color="red">winfonts</font>，linuxfonts和adobefonts暂时没有安装完全，会出现timeout。
 
 下表是目前实测可用的环境。如果有其他可用环境或不可用的环境，欢迎补充。
 
@@ -234,9 +210,34 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 
     目前看来是 caption 宏包的 bug，升级到 texlive 2021，或者使用新版 miktex 可以解决这个问题。
 
+11. **表格字号不是5号**
+    
+    在表格中临时使用`\zihao{5}`来实现。
+    这是因为模板在多年以前重定义了table和tabular，并且用于封面排版，所以正文表格字号可能会显示为小四，但由于直接修改cls文件封面会出现排版问题，因此需要用户自行调整字号。
+
 [TexLive]: https://www.tug.org/texlive/
 
 [MacTex]:https://tug.org/mactex/
+
+## 鸣谢
+
+- 本模板由学长学姐的南京大学硕士博士学位论文模板改编而来。
+
+- 本版本从AnyiRao仓库fork修改而来
+
+- 原作者RAY个人主页<http://anyirao.com>
+
+- 原作者个人仓库<https://github.com/AnyiRao/NJUThesis2018>
+
+## 声明
+
+- 此模版用于生成符合南京大学学位论文排版要求和相应的国家规范、行业标准的学位论文。
+
+- 基于本科生院的论文撰写规范修改。
+
+- 限于精力未提供**详细**使用说明。
+
+- 本模板旨在为同学提供毕业论文书写的方便，如有模板问题或者版权问题，请联系作者。
 
 ## 相关项目
 
