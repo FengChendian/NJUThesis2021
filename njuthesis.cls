@@ -166,7 +166,7 @@
 }
 \urlstyle{same}
 % \RequirePackage[sort&compress,numbers]{natbib}
-\RequirePackage[sort&compress]{gbt7714}
+\RequirePackage[sort&compress, comma]{gbt7714}
 \RequirePackage{hypernat}
 \RequirePackage{tabularx}
 \RequirePackage{makeidx}
