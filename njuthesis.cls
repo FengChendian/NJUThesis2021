@@ -378,6 +378,7 @@
   \selectfont\ignorespaces}
 \renewcommand{\tiny}{% 小六号 6.5bp
   \@setfontsize\tiny{\njut@fs@ssix}{\njut@fs@ssixskip}}
+
 \renewcommand{\scriptsize}{% 六号字 7.5bp
   \@setfontsize\scriptsize{\njut@fs@six}{\njut@fs@sixskip}}
 \renewcommand{\footnotesize}{% 小五号 9bp
@@ -390,6 +391,9 @@
     \parsep 2\p@ \@plus\p@ \@minus\p@
     \itemsep \parsep}%
   \belowdisplayskip \abovedisplayskip}
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
 \renewcommand{\small}{% 五号 10bp
   \@setfontsize\small{\njut@fs@five}{\njut@fs@fiveskip}%
   \abovedisplayskip 8.5\p@ \@plus3\p@ \@minus4\p@
