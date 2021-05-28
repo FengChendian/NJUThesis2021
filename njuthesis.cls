@@ -257,7 +257,7 @@
 \newcommand*{\njut@fs@sfiveskip}{10.84}
 \newcommand*{\njut@fs@five}{10.54} % 五号 10bp
 \newcommand*{\njut@fs@fiveskip}{12.65}
-\newcommand*{\njut@fs@sfour}{12.05} % 小四号 12bp
+\newcommand*{\njut@fs@sfour}{12.045} % 小四号 12bp
 \newcommand*{\njut@fs@sfourskip}{14.45}
 \newcommand*{\njut@fs@four}{14.05} % 四号字 14bp
 \newcommand*{\njut@fs@fourskip}{16.86}
@@ -1189,7 +1189,7 @@
 \newcommand{\keywords}[1]{%
   \renewcommand*{\njut@value@abstract@keywords}{#1}%
   \par\vspace{2ex}\noindent%
-  {\kaishu\zihao{-4}\makebox[4em][s]{\njut@cap@abstract@keywordsname{：}} }~{#1}%
+  {\kaishu\zihao{-4}\makebox[3.5em][s]{\njut@cap@abstract@keywordsname{：}} }~{#1}%
 }
 % \newcommand*{\englishabstracttitlea}[1]{%
 %   \renewcommand{\njut@value@abstract@en@titlea}{#1}%
