@@ -208,12 +208,25 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 
 10. **使用PDF格式的图片内容会被加粗**（issue #24）
 
-    目前看来是 caption 宏包的 bug，升级到 texlive 2021，或者使用新版 miktex 可以解决这个问题。
+   目前看来是 caption 宏包的 bug，升级到 texlive 2021，或者使用新版 miktex 可以解决这个问题。
 
 11. **表格字号不是5号**
     
-    在表格中临时使用`\zihao{5}`来实现。
-    这是因为模板在多年以前重定义了table和tabular，并且用于封面排版，所以正文表格字号可能会显示为小四，但由于直接修改cls文件封面会出现排版问题，因此需要用户自行调整字号。
+   在表格中临时使用`\zihao{5}`来实现。
+   这是因为模板在多年以前重定义了table和tabular，并且用于封面排版，所以正文表格字号可能会显示为小四，但由于直接修改cls文件封面会出现排版问题，因此需要用户自行调整字号。
+
+12. **图表标号(label)未加粗**
+
+   这是因为文件中只写了图表题目加粗，并未提到标号加粗，故模板未加，如果想要加粗，将cls文件中约550行处的
+   ```tex
+   \captionsetup[table]{position=top,textfont=songtibf}
+   \captionsetup[figure]{position=below,textfont=songtibf}
+   ```
+   改为
+   ```tex
+   \captionsetup[table]{position=below,textfont=songtibf,labelfont=songtibf}
+   \captionsetup[figure]{position=below,textfont=songtibf,labelfont=songtibf}
+   ```
 
 [TexLive]: https://www.tug.org/texlive/
 
