@@ -887,6 +887,9 @@
   \renewcommand{\njut@value@en@author}{#1}}
 \newcommand{\englishsupervisor}[1]{%
   \renewcommand{\njut@value@en@supervisor}{#1}}
+\newcommand{\englishsecondsupervisor}[1]{%
+  \njut@title@twosupervisorstrue
+  \renewcommand{\njut@value@en@secondsupervisor}{#1}}
 \newcommand{\englishmajor}[1]{%
   \renewcommand{\njut@value@en@major}{#1}}
 \newcommand{\englishdepartment}[1]{%
@@ -1122,6 +1125,7 @@
   \end{spacing}
   \cleardoublepage
 }
+% FIXME: 英文封面存在很多问题，如果有可能，尽可能修复一下
 \newcommand*{\makeenglishtitle}{%
   \thispagestyle{empty}
   \begin{center}
@@ -1178,7 +1182,7 @@
     院系： \njut@value@department \\
     专业： \njut@value@major \\
     本科生姓名： \njut@value@author \\
-    指导教师（姓名、职称）： \njut@value@supervisor\ \njut@value@supervisortitle \\
+    指导教师（姓名、职称）： \njut@value@supervisor\ \njut@value@supervisortitle \ifnjut@title@twosupervisors ，\njut@value@secondsupervisor\ \njut@value@secondsupervisortitle \fi \\
     摘要：
     \egroup
   }
@@ -1210,7 +1214,7 @@
     DEPARTMENT: \njut@value@en@department \\
     SPECIALIZATION: \njut@value@en@institute \\
     UNDERGRADUATE: \njut@value@en@author \\
-    MENTOR: \njut@value@en@supervisor \\
+    MENTOR: \njut@value@en@supervisor \ifnjut@title@twosupervisors , \njut@value@en@secondsupervisor \fi \\
     ABSTRACT:
     \egroup
   }
