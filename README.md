@@ -199,19 +199,27 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
    
 9. **如何添加第二导师**（issue #23）
 
-   使用如下命令：
+   使用如下命令，会同时在封面和中文摘要中包含第二导师：
 
    ```tex
    \secondsupervisor{导师姓名}
    \secondsupervisortitle{职称}
    ```
 
+   如果需要在英文摘要中包含第二导师，需要增加以下命令：
+
+   ```tex
+   \englishsecondsupervisor{Professor}
+   ```
+
+   可以在模板中查看具体的例子。
+
 10. **使用PDF格式的图片内容会被加粗**（issue #24）
 
    目前看来是 caption 宏包的 bug，升级到 texlive 2021，或者使用新版 miktex 可以解决这个问题。
 
 11. **表格字号不是5号**
-    
+
    在表格中临时使用`\zihao{5}`来实现。
    这是因为模板在多年以前重定义了table和tabular，并且用于封面排版，所以正文表格字号可能会显示为小四，但由于直接修改cls文件封面会出现排版问题，因此需要用户自行调整字号。
 
