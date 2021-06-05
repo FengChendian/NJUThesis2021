@@ -69,13 +69,14 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 
   ```latex
   %% 如需Adobe字体请用
-  %\documentclass[adobefonts]{njuthesis}
+  %% 如果字体不全使用Adobe选项可能会报错
+  %\documentclass[adobefonts, thesis]{njuthesis}
   %% MacOS系统请用
-  %\documentclass[macfonts]{njuthesis}
-  %% Windows系统请用（默认）
-  \documentclass[winfonts]{njuthesis}
+  %\documentclass[macfonts, thesis]{njuthesis}
+  %% Windows系统请用
+  \documentclass[winfonts, thesis]{njuthesis}
   %% Linux系统请用
-  %\documentclass[linuxfonts]{njuthesis}
+  % \documentclass[linuxfonts, thesis]{njuthesis}
   ```
 
 ### 常见问题
@@ -188,16 +189,25 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
       \linespread{1.25}
       ```
 
-7. **使用design选项后报错**
+7. **如何将封面中的“毕业论文”替换为“毕业设计”**
+
+   将 tex 文件开头的 thesis 选项替换为 design ，如下所示：
+   
+   ```tex
+   %% Windows系统请用
+   \documentclass[winfonts, design]{njuthesis}
+   ```
+   
+8. **使用design选项后报错**
 
    可能是没有替换cfg和cls文件，替换即可
-   
-8. **如何在论文中展示代码**
+
+9. **如何在论文中展示代码**
 
    1. 截图，然后以图片形式插入论文
    2. 使用模板中的代码段示例。模板中提供了一份基础样式，如果有更多需要，可以自行修改样式。
-   
-9. **如何添加第二导师**（issue #23）
+
+10. **如何添加第二导师**（issue #23）
 
    使用如下命令，会同时在封面和中文摘要中包含第二导师：
 
@@ -214,7 +224,7 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
 
    可以在模板中查看具体的例子。
 
-10. **使用PDF格式的图片内容会被加粗**（issue #24）
+11. **使用PDF格式的图片内容会被加粗**（issue #24）
 
    目前看来是 caption 宏包的 bug，升级到 texlive 2021，或者使用新版 miktex 可以解决这个问题。
 
