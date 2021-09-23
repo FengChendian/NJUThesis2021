@@ -9,7 +9,7 @@
 
 > 该仓库符合**2021**年本科毕业论文要求，并且**不再维护❌**
 
-因为NJU Thesis 2021所继承的模板太过古老，在维护过程中经常产生奇怪的并且难以修复的bug，所以为了模板的可持续发展，我们决定对NJU Thesis进行**重构**，项目将被挂载于[**NJU-LUG**](https://github.com/nju-lug)组织仓库下，项目名[NJUThesisUndergraduate](https://github.com/nju-lug/NJUThesisUndergraduate)，由NJU-LUG进行维护。
+因为NJU Thesis 2021所继承的模板太过古老，在维护过程中经常产生奇怪的并且难以修复的bug，所以为了模板的可持续发展，我们决定对NJU Thesis进行**重构**，项目将被挂载于[**NJU-LUG**](https://github.com/nju-lug)组织仓库下，项目名[NJUThesis](https://github.com/nju-lug/NJUThesisUndergraduate)，由NJU-LUG进行维护。
 
 ***
 **重要提醒：希望大家实时关注模板更新，定稿前最好使用最新版本的模板！**
