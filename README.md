@@ -130,7 +130,7 @@ GitHub提供打包下载，如果GitHub速度过慢，可以去[NJU GitLab同步
    ```tex
    \titlea{基于A的B}  % 第一行
    \titleb{的设计}    % 第二行
-   \titleb{与实现}    % 第三行
+   \titlec{与实现}    % 第三行
    ```
 
 2. **使用长标题后摘要部分的题目不见了**
